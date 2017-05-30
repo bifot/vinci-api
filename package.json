@@ -1,0 +1,30 @@
+{
+  "name": "vinci-api",
+  "version": "1.0.0",
+  "description": "A little documentation for working with vinci API.",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bifot/vinci-api.git"
+  },
+  "keywords": [
+    "vinci",
+    "api",
+    "photos",
+    "editor",
+    "photo",
+    "edit"
+  ],
+  "author": "Mikhail Semin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bifot/vinci-api/issues"
+  },
+  "homepage": "https://github.com/bifot/vinci-api#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mime": "^1.3.6",
+    "path": "^0.12.7",
+    "request": "^2.81.0"
+  }
+}

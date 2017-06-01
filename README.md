@@ -31,7 +31,8 @@ request({
   json: true
 }, (err, res, body) => {
   if (!err && res.statusCode === 200 && body.preload) {    
-    request(`${proxy}http://vinci.camera/process/${body.preload}/${filter}`).pipe(fs.createWriteStream('./test/vinci.jpg'))
+    request(`${proxy}http://vinci.camera/process/${body.preload}/${filter}`)
+      .pipe(fs.createWriteStream('./test/vinci.jpg'))
   }
 })
 ```

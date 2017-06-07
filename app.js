@@ -24,15 +24,15 @@ const data = {
 }
 
 for (let i = 0; i < filters.length; i++) {
-      request({
-        url: 'http://vinci.camera/preload',
-        method: 'post',
-        formData: data,
-        json: true
-      }, (err, res, body) => {
-        if (!err && res.statusCode === 200 && body.preload) {
-          request(`${proxy}http://vinci.camera/process/${body.preload}/${filters[i]}`)
-            .pipe(fs.createWriteStream(`./test/vinci${filters[i]}.png`))
-        }
-      })
+  request({
+    url: 'http://vinci.camera/preload',
+    method: 'post',
+    formData: data,
+    json: true
+  }, (err, res, body) => {
+    if (!err && res.statusCode === 200 && body.preload) {
+      request(`${proxy}http://vinci.camera/process/${body.preload}/${filters[i]}`)
+        .pipe(fs.createWriteStream(`./test/vinci${filters[i]}.png`))
+    }
+  })
 }
